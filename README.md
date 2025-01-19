@@ -9,7 +9,7 @@ This branch has ***encrypt/decrypt*** files and option to more test with that.
 ### Firmware version:
 CUBOT_MAX_5_E051_V06_20241108.zip - CUBOT_MAX_5_E051_V06_20241108
 
-g3382pme_v1_ga_cq_e051_u
+g3382pme_v1_ga_cq_e051_u - hxy - teksun
 
 ## Device
 
