@@ -1,0 +1,14 @@
+cc_library_static {
+    name: "libinit_MAX_5",
+    header_libs: [
+        "libbase_headers",
+    ],
+    cflags: [
+        "-Wall",
+    ],
+    static_libs: [
+        "libbase",
+    ],
+    srcs: ["init_MAX_5.cpp"],
+    recovery_available: true,
+}
