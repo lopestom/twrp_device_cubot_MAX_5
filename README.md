@@ -1,6 +1,6 @@
 [![GitHub Release](https://img.shields.io/github/release/lopestom/twrp_device_cubot_MAX_5.svg?logo=github)](https://github.com/lopestom/twrp_device_cubot_MAX_5/releases/tag/12833551276) [![GPLv3+](https://img.shields.io/badge/license-GPLv3+-red.svg)](https://www.gnu.org/licenses/gpl-3.0.html) [![download](https://img.shields.io/github/downloads/lopestom/twrp_device_cubot_MAX_5/total)](https://github.com/lopestom/twrp_device_cubot_MAX_5/releases/download/12833551276/vendor_boot-MAX_5-20250117.img)
 --------------------------------------------------------
-### TWRP device tree for Cubot MAX 5 -- kernel 5.10.198-android12-9-
+## TWRP device tree for Cubot MAX 5 -- kernel 5.10.198-android12-9-
 
 This branch has ***encrypt/decrypt*** files and option to more test with that. 
 
@@ -8,6 +8,7 @@ This branch has ***encrypt/decrypt*** files and option to more test with that.
 
 ### Firmware version:
 CUBOT_MAX_5_E051_V06_20241108.zip - CUBOT_MAX_5_E051_V06_20241108
+
 g3382pme_v1_ga_cq_e051_u
 
 ## Device
@@ -24,9 +25,7 @@ Display | 6.95 inches, 60~144 hz
 Resolution | 1080 x 2460 pixels, 20:9 ratio (~387 ppi density)
 Processor | MediaTek Dimensity 8200 (MT6895)
 
-![MAX 5](https://cdn-files.kimovil.com/default/0010/48/thumb_947031_default_big.jpg)
-
-![DD](https://fdn2.gsmarena.com/vv/pics/cubot/cubot-max5-2.jpg)
+![MAX 5](https://fdn2.gsmarena.com/vv/pics/cubot/cubot-max5-2.jpg)
 
 ### Status
 
