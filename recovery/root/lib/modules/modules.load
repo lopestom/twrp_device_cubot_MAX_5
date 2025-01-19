@@ -69,6 +69,7 @@ mdp_drv_mt6895.ko
 cmdq_helper_inf.ko
 mtk_panel_ext.ko
 panel-hl-icnl9922c-vdo-682-hx.ko
+panel-qcg-icnl9922c-vdo-682-hx.ko
 mediatek-drm-gateic.ko
 mediatek-drm-panel-drv.ko
 mediatek-drm.ko

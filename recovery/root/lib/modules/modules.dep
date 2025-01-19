@@ -56,6 +56,7 @@
 /lib/modules/kfifo_buf.ko:
 /lib/modules/mtk-spmi-pmic.ko: /lib/modules/regmap-spmi.ko
 /lib/modules/emi.ko: /lib/modules/emi-mpu.ko /lib/modules/aee_aed.ko /lib/modules/mrdump.ko
+/lib/modules/panel-qcg-icnl9922c-vdo-682-hx.ko: /lib/modules/hxy_lcm.ko /lib/modules/mtk_panel_ext.ko
 /lib/modules/reboot-mode.ko:
 /lib/modules/mtk-pm-domain-disable-unused.ko:
 /lib/modules/mux_switch.ko:
