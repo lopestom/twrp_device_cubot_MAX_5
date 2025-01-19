@@ -60,9 +60,9 @@ PRODUCT_GMS_CLIENTID_BASE := android-cubot
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=MAX_5 \
     PRODUCT_NAME=MAX_5_EEA \
-    PRIVATE_BUILD_DESC="hal_mgvi_64_armv82-user 12 UP1A.231005.007 2024094 release-keys"
+    PRIVATE_BUILD_DESC="vext_g3382pme_v1_ga_cq_e051_u-user 12 UP1A.231005.007 2024123 release-keys"
 
-BUILD_FINGERPRINT := "CUBOT/MAX_5_EEA/MAX_5:14/UP1A.231005.007/2024094:user/release-keys"
+BUILD_FINGERPRINT := "CUBOT/MAX_5_EEA/MAX_5:14/UP1A.231005.007/2024123:user/release-keys"
 
 
 # ro.vendor.build.version.release=12
