@@ -1,4 +1,4 @@
-[![GitHub Release](https://img.shields.io/github/release/lopestom/twrp_device_cubot_MAX_5.svg?logo=github)](https://github.com/lopestom/twrp_device_cubot_MAX_5/releases/tag/12833551276) [![GPLv3+](https://img.shields.io/badge/license-GPLv3+-red.svg)](https://www.gnu.org/licenses/gpl-3.0.html) [![download](https://img.shields.io/github/downloads/lopestom/twrp_device_cubot_MAX_5/total)](https://github.com/lopestom/twrp_device_cubot_MAX_5/releases/download/12833551276/vendor_boot-MAX_5-20250117.img)
+[![GitHub Release](https://img.shields.io/github/release/lopestom/twrp_device_cubot_MAX_5.svg?logo=github)](https://github.com/lopestom/twrp_device_cubot_MAX_5/releases/tag/12856591058) [![GPLv3+](https://img.shields.io/badge/license-GPLv3+-red.svg)](https://www.gnu.org/licenses/gpl-3.0.html) [![download](https://img.shields.io/github/downloads/lopestom/twrp_device_cubot_MAX_5/total)](https://github.com/lopestom/twrp_device_cubot_MAX_5/releases/download/12856591058/vendor_boot-MAX_5-20250119.img)
 --------------------------------------------------------
 ## TWRP device tree for Cubot MAX 5 -- kernel 5.10.198-android12-9-
 
@@ -36,7 +36,7 @@ Some tests was made:
 
 ### First img Test
 
-* Initial DT: 2024-09-09 update to 2025-01-09
+* Initial DT: 2024-09-09 update in 2025-01-19
   
    Compiled img file 2025mmdd and tested in 2025mmdd
 
