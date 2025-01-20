@@ -61,7 +61,7 @@ Some tests was made:
 
 #### Big thanks to:
 
-- [Simich07 from 4pda](https://4pda.to/forum/index.php?showuser=1671401)
+- [Simich07 from 4pda](https://4pda.to/forum/index.php?showuser=1671401) for test TWRP file
 - @Rusikxxx
 - @ADeadTrousers
   * For his role as a lead developer in the solutions to solve the decryption problem in TWRP using trustkernel.
