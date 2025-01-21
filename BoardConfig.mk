@@ -187,7 +187,7 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_DEVICE_VERSION := Cubot MAX 5_V06 - lopestom
 
 TW_USE_LEGACY_BATTERY_SERVICES := true
-TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone47/temp
+TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone37/temp
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
 TW_BACKUP_EXCLUSIONS := /data/fonts/files
 #TW_BACKUP_EXCLUSIONS := /data/fonts
