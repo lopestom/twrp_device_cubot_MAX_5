@@ -114,7 +114,7 @@ jobs:
     - name: Checkout device tree
       uses: actions/checkout@v4
       with:
-       path: android-recovery/device_tree/device/cubot/MAX_5
+       path: device_tree/device/cubot/MAX_5
         echo "COMMIT_ID=$(git rev-parse HEAD)" >> $GITHUB_ENV
 
 #    - name: Clone Device Tree
