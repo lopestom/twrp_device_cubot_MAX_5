@@ -114,7 +114,7 @@ jobs:
     - name: Checkout device tree
       uses: actions/checkout@v4
       with:
-       path: device_tree/device/cubot/MAX_5
+       path: android-recovery/device/cubot/MAX_5
         echo "COMMIT_ID=$(git rev-parse HEAD)" >> $GITHUB_ENV
 
 #    - name: Clone Device Tree
@@ -126,7 +126,7 @@ jobs:
 
     - name: Extracting variables from .mk file
       run: |
-        cd android-recovery/device_tree
+        cd android-recovery/device/cubot/MAX_5
         # Initialize variables
         DEVICE_MAKEFILE=""
         DEVICE_DIRECTORY=""
