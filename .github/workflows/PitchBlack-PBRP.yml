@@ -7,7 +7,7 @@ on:
       MANIFEST_BRANCH:
         description: 'PBRP Manifest Branch'
         required: true
-        default: ''
+        default: 'android-12.1'
         type: choice
         options:
         - android-14.0
@@ -22,10 +22,12 @@ on:
         description: 'Custom Recovery Tree Branch' # Your Device Tree Branch, make sure it's right.
         required: true
         default: 'twrp-12.2'
+      DEVICE: MAX_5
+      DEVICE_PATH: device/cubot/MAX_5
       BUILD_TARGET:
         description: 'Specify your Build Target' # Pick among boot, recovery and vendor_boot
         required: true
-        default: ''
+        default: 'vendorbootimage'
         type: choice
         options:
         - pbrp
@@ -61,6 +63,8 @@ jobs:
         echo "Manifest Branch: ${{ inputs.MANIFEST_BRANCH }}"
         echo "Device Tree: ${{ inputs.DEVICE_TREE }}"
         echo "Device Branch: ${{ inputs.DEVICE_TREE_BRANCH }}"
+        echo "Build Target: ${{ inputs.DEVICE }}"        
+        echo "Build Target: ${{ inputs.DEVICE_PATH }}"
         echo "Build Target: ${{ inputs.BUILD_TARGET }}"
 
     - name: Cleanup
@@ -114,7 +118,7 @@ jobs:
     - name: Checkout device tree
       uses: actions/checkout@v4
       with:
-       path: android-recovery/device/cubot/MAX_5
+       path: android-recovery/${{ inputs.DEVICE_PATH }}
         echo "COMMIT_ID=$(git rev-parse HEAD)" >> $GITHUB_ENV
 
     - name: Installing python2 for legacy builds
@@ -127,14 +131,14 @@ jobs:
         cd android-recovery
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
-        lunch ${{ env.DEVICE_MAKEFILE }}-eng && mka ${{ inputs.BUILD_TARGET }}
+        lunch ${{ inputs.DEVICE }}-eng && mka ${{ inputs.BUILD_TARGET }}
 
     - name: Check Build Makefile
       run: |
         cd android-recovery
-        if [ -f out/target/product/${{ env.DEVICE_NAME }}/recovery.img ]; then
+        if [ -f out/target/product/${{ inputs.DEVICE }}/recovery.img ]; then
             echo "BUILD_TARGET_NAME=recovery" >> $GITHUB_ENV
-        elif [ -f out/target/product/${{ env.DEVICE_NAME }}/boot.img ]; then
+        elif [ -f out/target/product/${{ inputs.DEVICE }}/boot.img ]; then
             echo "BUILD_TARGET_NAME=boot" >> $GITHUB_ENV
         else
             echo "BUILD_TARGET_NAME=vendor_boot" >> $GITHUB_ENV
@@ -148,9 +152,9 @@ jobs:
       uses: softprops/action-gh-release@master
       with:
         files: |
-          android-recovery/out/target/product/${{ env.DEVICE_NAME }}/${{ env.BUILD_TARGET_NAME }}.img
-          android-recovery/out/target/product/${{ env.DEVICE_NAME }}/PBRP*.zip
-        name: Unofficial PBRP for ${{ env.DEVICE_NAME }} // ${{ env.BUILD_DATE }}
+          android-recovery/out/target/product/${{ inputs.DEVICE }}/${{ env.BUILD_TARGET_NAME }}.img
+          android-recovery/out/target/product/${{ inputs.DEVICE }}/PBRP*.zip
+        name: Unofficial PBRP for ${{ inputs.DEVICE }} // ${{ env.BUILD_DATE }}
         tag_name: ${{ github.run_id }}
         body: |
           Build: ${{ inputs.MANIFEST_BRANCH }}
@@ -161,9 +165,9 @@ jobs:
       if: inputs.LDCHECK == 'true'
       run: |
         cd tools
-        mv -n libneeds ${GITHUB_WORKSPACE}/android-recovery/out/target/product/${{ env.DEVICE_NAME }}/recovery/root/
-        mv -n ldcheck ${GITHUB_WORKSPACE}/android-recovery/out/target/product/${{ env.DEVICE_NAME }}/recovery/root/
-        cd ../android-recovery/out/target/product/${{ env.DEVICE_NAME }}/recovery/root
+        mv -n libneeds ${GITHUB_WORKSPACE}/android-recovery/out/target/product/${{ inputs.DEVICE }}/recovery/root/
+        mv -n ldcheck ${GITHUB_WORKSPACE}/android-recovery/out/target/product/${{ inputs.DEVICE }}/recovery/root/
+        cd ../android-recovery/out/target/product/${{ inputs.DEVICE }}/recovery/root
         python3 ldcheck -p system/lib64:vendor/lib64:system/lib:vendor/lib -d ${{ inputs.LDCHECKPATH }}
         echo "Done checking missing dependencies. Review, and reconfigure your tree."
       continue-on-error: true
