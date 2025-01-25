@@ -23,11 +23,11 @@ on:
         required: true
         default: 'twrp-12.2'
       DEVICE:
-        description: 'Device Name' # From PRODUCT_DEVICE in twrp_NAME.mk
+        description: 'PRODUCT_DEVICE' # From PRODUCT_DEVICE in twrp_NAME.mk
         required: true
         default: 'MAX_5'
       DEVICE_PATH:
-        description: 'Device Name' # From DEVICE_PATH in BoardConfig.mk
+        description: 'DEVICE_PATH' # From DEVICE_PATH in BoardConfig.mk
         required: true
         default: 'device/cubot/MAX_5'
       BUILD_TARGET:
