@@ -7,7 +7,7 @@ This branch has ***encrypt/decrypt*** files and option to more test with that.
 [![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.com/donate?token=Cxr1xP4Yr_XgV2E5lpC6Oo4qvbqmPiS3TgR6aiMEnQUgxr_nP242Z6zMqzeluThwaikNL-FXe8RnA1pT) to TeamWin so any donation is highly appreciated!
 
 ### Firmware version:
-CUBOT_MAX_5_E051_V06_20241108.zip - CUBOT_MAX_5_E051_V06_20241108
+CUBOT_MAX_5_E051_V08_20250116.zip - CUBOT_MAX_5_E051_V08_20250116
 
 g3382pme_v1_ga_cq_e051_u - hxy - teksun
 
@@ -36,7 +36,7 @@ Some tests was made:
 
 ### First img Test
 
-* Initial DT: 2024-09-09 update in 2025-01-19
+* Initial DT: 2024-09-09 update in 2025-01-25
   
    Compiled img file 2025mmdd and tested in 2025mmdd
 
