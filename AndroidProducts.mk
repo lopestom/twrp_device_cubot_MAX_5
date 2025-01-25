@@ -14,6 +14,6 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/twrp_MAX_5.mk
+PRODUCT_MAKEFILES := $(LOCAL_DIR)/pb_MAX_5.mk
 
-COMMON_LUNCH_CHOICES := twrp_MAX_5-eng
+COMMON_LUNCH_CHOICES := pb_MAX_5-eng
