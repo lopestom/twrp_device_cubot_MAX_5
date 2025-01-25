@@ -139,17 +139,6 @@ jobs:
         export ALLOW_MISSING_DEPENDENCIES=true
         lunch pb_${{ inputs.DEVICE }}-eng && mka ${{ inputs.BUILD_TARGET }}
 
-    - name: Check Build Makefile
-      run: |
-        cd android-recovery
-        if [ -f out/target/product/${{ inputs.DEVICE }}/recovery.img ]; then
-            echo "BUILD_TARGET_NAME=recovery" >> $GITHUB_ENV
-        elif [ -f out/target/product/${{ inputs.DEVICE }}/boot.img ]; then
-            echo "BUILD_TARGET_NAME=boot" >> $GITHUB_ENV
-        else
-            echo "BUILD_TARGET_NAME=vendor_boot" >> $GITHUB_ENV
-        fi
-
     - name: Set Build Date # Output will be use in Release
       run: |
         echo "BUILD_DATE=$(date +%Y%m%d)" >> $GITHUB_ENV
@@ -158,7 +147,7 @@ jobs:
       uses: softprops/action-gh-release@master
       with:
         files: |
-          android-recovery/out/target/product/${{ inputs.DEVICE }}/${{ env.BUILD_TARGET_NAME }}.img
+          android-recovery/out/target/product/${{ inputs.DEVICE }}/*.img
           android-recovery/out/target/product/${{ inputs.DEVICE }}/PBRP*.zip
         name: Unofficial PBRP for ${{ inputs.DEVICE }} // ${{ env.BUILD_DATE }}
         tag_name: ${{ github.run_id }}
