@@ -1,6 +1,6 @@
 [![GitHub Release](https://img.shields.io/github/release/lopestom/twrp_device_cubot_MAX_5.svg?logo=github)](https://github.com/lopestom/twrp_device_cubot_MAX_5/releases/tag/12856591058) [![GPLv3+](https://img.shields.io/badge/license-GPLv3+-red.svg)](https://www.gnu.org/licenses/gpl-3.0.html) [![download](https://img.shields.io/github/downloads/lopestom/twrp_device_cubot_MAX_5/total)](https://github.com/lopestom/twrp_device_cubot_MAX_5/releases/download/12856591058/vendor_boot-MAX_5-20250119.img)
 --------------------------------------------------------
-## TWRP device tree for Cubot MAX 5 -- kernel 5.10.198-android12-9-
+## TWRP device tree for Cubot MAX 5 -- kernel 5.10.198-android12-9-ge114e691458d
 
 This branch has ***encrypt/decrypt*** files and option to more test with that. 
 
