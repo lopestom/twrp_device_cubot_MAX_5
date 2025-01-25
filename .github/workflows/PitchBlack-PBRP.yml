@@ -124,7 +124,7 @@ jobs:
     - name: Checkout device tree
       uses: actions/checkout@v4
       with:
-       path: android-recovery/${{ inputs.DEVICE_PATH }}
+       path: ${{ inputs.DEVICE_PATH }}
         echo "COMMIT_ID=$(git rev-parse HEAD)" >> $GITHUB_ENV
 
     - name: Installing python2 for legacy builds
