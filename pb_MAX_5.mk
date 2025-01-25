@@ -31,8 +31,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Enable userspace reboot
 $(call inherit-product, $(SRC_TARGET_DIR)/product/userspace_reboot.mk)
 
-# Configure twrp config common.mk
-$(call inherit-product, vendor/twrp/config/common.mk)
+# Configure pbrp config common.mk
+$(call inherit-product, vendor/pb/config/common.mk)
 
 # Configure compression
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression.mk)
@@ -45,7 +45,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
 # Device identifier
 PRODUCT_DEVICE := MAX_5
-PRODUCT_NAME := twrp_MAX_5
+PRODUCT_NAME := pb_MAX_5
 PRODUCT_BRAND := CUBOT
 PRODUCT_MODEL := MAX 5
 PRODUCT_MANUFACTURER := CUBOT
