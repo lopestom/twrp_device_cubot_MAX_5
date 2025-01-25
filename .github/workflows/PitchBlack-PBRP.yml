@@ -21,7 +21,7 @@ on:
       DEVICE_TREE_BRANCH:
         description: 'Custom Recovery Tree Branch' # Your Device Tree Branch, make sure it's right.
         required: true
-        default: 'twrp-12.2'
+        default: 'pbrp-12.1'
       DEVICE:
         description: 'PRODUCT_DEVICE' # From PRODUCT_DEVICE in twrp_NAME.mk
         required: true
@@ -56,7 +56,7 @@ jobs:
     runs-on: ubuntu-20.04
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.TEST }}
     permissions:
       contents: write
     steps:
